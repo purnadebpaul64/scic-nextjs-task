@@ -2,7 +2,10 @@ import ProductCard from "../components/ProductCard";
 
 async function getProducts() {
   // Fetch products from API (SSR-friendly)
-  const res = await fetch(`http://localhost:3000/api/products`, {
+  // const res = await fetch(`http://localhost:3000/api/products`, {
+  //   cache: "no-store", // ensure fresh data
+  // });
+  const res = await fetch(`https://scic-nextjs-task.vercel.app/`, {
     cache: "no-store", // ensure fresh data
   });
   if (!res.ok) throw new Error("Failed to fetch products");
