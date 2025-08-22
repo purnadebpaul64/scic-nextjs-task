@@ -2,9 +2,12 @@ import React from "react";
 
 async function getProduct(id) {
   // Use relative path, Next.js handles it in both dev & prod
-  const res = await fetch(`http://localhost:3000/api/products/${id}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://scic-nextjs-task.vercel.app/api/products/${id}`,
+    {
+      cache: "no-store",
+    }
+  );
   if (!res.ok) return null;
   return res.json();
 }
