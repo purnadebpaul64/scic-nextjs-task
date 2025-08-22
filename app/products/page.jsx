@@ -5,7 +5,7 @@ async function getProducts() {
   // const res = await fetch(`http://localhost:3000/api/products`, {
   //   cache: "no-store", // ensure fresh data
   // });
-  const res = await fetch(`https://scic-nextjs-task.vercel.app/`, {
+  const res = await fetch(`https://scic-nextjs-task.vercel.app/api/products`, {
     cache: "no-store", // ensure fresh data
   });
   if (!res.ok) throw new Error("Failed to fetch products");
