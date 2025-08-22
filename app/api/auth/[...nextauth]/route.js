@@ -62,12 +62,6 @@ export const authOptions = {
       },
     }),
   ],
-  //   session: {
-  //     strategy: "jwt",
-  //   },
-  //   pages: {
-  //     signIn: "/login", // custom login page (optional)
-  //   },
 };
 
 const handler = NextAuth(authOptions);
